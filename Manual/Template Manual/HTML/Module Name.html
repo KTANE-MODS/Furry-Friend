@@ -1,0 +1,709 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1" />
+    <title>Furry Friend — Keep Talking and Nobody Explodes Module</title>
+    <link rel="stylesheet" type="text/css" href="css/font.css" />
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <script src="js/ktane-utils.js"></script>
+    <style>
+      .dark table,
+      table {
+        margin: 1em auto;
+        border: none;
+        text-align: center;
+      }
+
+      .page-footer::before {
+        content: "Page ";
+      }
+      .page-footer::after {
+        content: " of 15";
+      }
+
+      p.info {
+        text-indent: 30px;
+      }
+
+      td ul {
+        padding-inline-start: 20px;
+      }
+
+      #heart::after {
+        content: "  <3";
+      }
+    </style>
+  </head>
+  <body>
+    <div class="section">
+      <div class="page page-bg-01">
+        <div class="page-header">
+          <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+          <span class="page-header-section-title">Furry Friend</span>
+        </div>
+        <div class="page-content">
+          <img src="img/Component/Module Name.svg" class="diagram" />
+          <h2>On the Subject of Furry Friend</h2>
+          <p class="flavour-text">UwU~ I’m sooo excited to pway with uuu!!! *Tail waggles*</p>
+
+          <p>
+            Standing before you are three fur friends that really want to hangout with you today! To disarm the module, you need to spend the day with all three of them, do all of the desired
+            activities they want you to do with them, and have a great time!
+          </p>
+
+          <h3>1. Figuring Out the Order</h3>
+          <ul>
+            <li>You will hangout with each fur friend one at a time throughout the day during the morning, evening, and night.</li>
+            <li>To get the initial order, you’re going to modify the list of all 10 possible fur friends using the table of conditions below.</li>
+            <li>
+              The starting list is in alphabetical order as follows:
+              <b> Aaron, Eltrick, Kugel, Más, Mico, Razor, Skipz, Tammy, Umbra, ???. </b>
+              Keep in mind these are their short names.
+            </li>
+            <li><b>For every battery on the bomb, shift the list left.</b></li>
+            <li><b>For every port on the bomb, shift the list right.</b></li>
+            <li>Now, go through all conditions from top to bottom and apply the action to your current order if the condition is true.</li>
+          </ul>
+
+          <table>
+            <tr>
+              <th>Action</th>
+              <th>Condition</th>
+            </tr>
+
+            <tr>
+              <td>If there is an FRK indicator,</td>
+              <td>Swap Kugel and Razor,</td>
+            </tr>
+            <tr>
+              <td>If there are at least two A’s present throughout all indicators and the serial number,</td>
+              <td>
+                Move Aaron to the front of the list, then move the first x friends in the list so far that have an A in their short name (the bolded bullet point above) to the end of the list,
+                maintaining the order they were in. Where x is the number of A’s used in the condition. If there are more than four A’s, shift the last four friends to the right times the remaining
+                amount of A’s.
+              </td>
+            </tr>
+
+            <tr>
+              <td>If there is a TRN indicator,</td>
+              <td>Swap Razor and Tammy.</td>
+            </tr>
+            <tr>
+              <td>If Aaron and Skipz are present on the module,</td>
+              <td>Move Skipz to the front of the list.</td>
+            </tr>
+          </table>
+        </div>
+        <div class="page-footer relative-footer">1</div>
+      </div>
+
+      <div class="page page-bg-02">
+        <div class="page-header">
+          <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+          <span class="page-header-section-title">Furry Friend</span>
+        </div>
+        <div class="page-content">
+          <table>
+            <tr>
+              <th>Action</th>
+              <th>Condition</th>
+            </tr>
+            <tr>
+              <td>If there is an FRQ indicator,</td>
+              <td>Swap Más and Razor.</td>
+            </tr>
+            <tr>
+              <td>If Tammy is present on the module,</td>
+              <td>Swap Tammy with the friend in the position of the first digit in the serial number, with 0 being position 10. If the position is the same, don’t do anything.</td>
+            </tr>
+            <tr>
+              <td>If there is an IND indicator,</td>
+              <td>Swap Mico and ???.</td>
+            </tr>
+            <tr>
+              <td>If the serial number contains four letters,</td>
+              <td>
+                Find which friend has the most UNIQUE letters in the serial number contained in their full name (the title in each of their pages below), and move them to the front of the list. If
+                there is a tie, move all tied friends to the back instead, maintaining the order they were in.
+              </td>
+            </tr>
+            <tr>
+              <td>If there is an SND indicator,</td>
+              <td>Swap Skipz and ???.</td>
+            </tr>
+            <tr>
+              <td>If there are two or four numbers in the serial number,</td>
+              <td>Swap the positions of the first two numbers in the serial number, then the second next two, with 0 being position 10.</td>
+            </tr>
+            <tr>
+              <td>If there is a CAR indicator,</td>
+              <td>Swap Aaron and Umbra.</td>
+            </tr>
+            <tr>
+              <td>If there is a module on the bomb with “fur” in the name,</td>
+              <td>Move Aaron, Kugel, Más, Mico, Razor, Tammy, and Umbra to the front of the list, maintaining the order they were in.</td>
+            </tr>
+            <tr>
+              <td>If there is an SIG indicator,</td>
+              <td>Swap Kugel and Skipz.</td>
+            </tr>
+            <tr>
+              <td>If there is a module on the bomb with “cat” in the name,</td>
+              <td>
+                Shift the list so that Umbra is at the position where the C of cat in the module name is positioned, modulo 10 with 0 being 10. If there are multiple modules with cat in the name, use
+                the module that comes first alphabetically.
+              </td>
+            </tr>
+            <tr>
+              <td>If there is a BOB indicator,</td>
+              <td>Swap Tammy and ???.</td>
+            </tr>
+          </table>
+        </div>
+        <div class="page-footer relative-footer">2</div>
+      </div>
+      <div class="page page-bg-03">
+        <div class="page-header">
+          <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+          <span class="page-header-section-title">Furry Friend</span>
+        </div>
+        <div class="page-content">
+          <table>
+            <tr>
+              <td>If there are more lit indicators than unlit indicators,</td>
+              <td>Move Aaron, Skipz, and Más to the front of the list, maintaining the order they were in.</td>
+            </tr>
+            <tr>
+              <td>If there are more unlit indicators than lit indicators,</td>
+              <td>Move Eltrick, Mico, and Razor to the front of the list, maintaining the order they were in.</td>
+            </tr>
+            <tr>
+              <td>If there are an equal amount of lit and unlit indicators,</td>
+              <td>Move Kugel, Umbra, and ??? to the front of the list, maintaining the order they were in.</td>
+            </tr>
+            <tr>
+              <td>If there are no indicators,</td>
+              <td>Swap Tammy with the friend in position 5, do nothing if she’s already there.</td>
+            </tr>
+            <tr>
+              <td>If there is an MSA indicator,</td>
+              <td>Swap Más and Mico.</td>
+            </tr>
+            <tr>
+              <td>If there is an E and either an A or U in the serial number,</td>
+              <td>Swap Eltrick with Aaron if there was an A. Swap Eltrick with Umbra if there was a U.</td>
+            </tr>
+            <tr>
+              <td>If there is a CLR indicator,</td>
+              <td>Swap Eltrick and Umbra.</td>
+            </tr>
+            <tr>
+              <td>If five or more conditions have applied so far,</td>
+              <td>Repeat the third action applied.</td>
+            </tr>
+            <tr>
+              <td>If there is a NSA indicator,</td>
+              <td>Swap Aaron and Tammy.</td>
+            </tr>
+            <tr>
+              <td>If there is a port type with at least three duplicates,</td>
+              <td>Do all specific indicator rules where they swap two friends that DIDN’T apply from top to bottom.</td>
+            </tr>
+          </table>
+          <ul>
+            <li>
+              Now that you have your initial order,
+              <b>
+                keep the initial order but make a shorter list of the 3 friends present on the module from the order of the initial order. The first will represent morning, the second evening, and the
+                last night.</b
+              >
+            </li>
+            <li>You will need to modify the shorter order further, because some friends prefer to hangout with you at a certain time of day.</li>
+            <li>Each friend will be prioritized based on if they feel sad today. Use the next table to determine if they are sad. If the condition applies to that friend, they are feeling sad.</li>
+          </ul>
+
+          <table>
+            <tr>
+              <th>Friend</th>
+              <th>T~T Condition</th>
+            </tr>
+            <tr>
+              <td>Aaron</td>
+              <td>Aaron is after Tammy in the initial order.</td>
+            </tr>
+            <tr>
+              <td>Eltrick</td>
+              <td>Mico is not present on the module.</td>
+            </tr>
+            <tr>
+              <td>Kugel</td>
+              <td>Aaron, MásQuéÉlite, and Razor are not present on the module.</td>
+            </tr>
+          </table>
+        </div>
+        <div class="page-footer relative-footer">3</div>
+      </div>
+      <div class="page page-bg-04">
+        <div class="page-header">
+          <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+          <span class="page-header-section-title">Furry Friend</span>
+        </div>
+        <div class="page-content">
+          <table>
+            <tr>
+              <td>Más</td>
+              <td>There is an unlit TRN on the bomb.</td>
+            </tr>
+
+            <tr>
+              <td>Mico</td>
+              <td>Skipz is not present on the module.</td>
+            </tr>
+            <tr>
+              <td>Razor</td>
+              <td>Tammy is present on the module.</td>
+            </tr>
+            <tr>
+              <td>Skipz</td>
+              <td>Aaron is present on the module.</td>
+            </tr>
+            <tr>
+              <td>Umbra</td>
+              <td>Umbra is after Aaron in the initial order.</td>
+            </tr>
+            <tr>
+              <td>???</td>
+              <td>If ??? is the last one in the initial order.</td>
+            </tr>
+          </table>
+          <ul>
+            <li>
+              If that friend is feeling sad, you will use the next table to move them into their desired time, swapping with the friend that is already in that time. You will swap in order of the
+              initial order.
+            </li>
+            <li>Otherwise, that friend will not make a swap.</li>
+            <li>
+              BUT, before you start swapping, if two or more friends that are feeling sad conflict at the same time, use the first letter of the serial number:
+              <ul>
+                <li>
+                  If that letter appears in exactly one of their short names (the names of the initial order, NOT their full names), that friend will swap while the other friends that were conflicting
+                  will not swap.
+                </li>
+                <li>
+                  Otherwise, if that letter appears in more than one of their short names or none of their short names, go back a letter in the alphabet and see if that letter appears in exactly one
+                  of their names. Keep doing so until you reach a letter.
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <table>
+            <tr>
+              <th>Morning</th>
+              <th>Evening</th>
+              <th>Night</th>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li>Aaron</li>
+                  <li>Más</li>
+                  <li>Skipz</li>
+                </ul>
+              </td>
+
+              <td>
+                <ul>
+                  <li>Kugel</li>
+                  <li>Razor</li>
+                  <li>???</li>
+                </ul>
+              </td>
+
+              <td>
+                <ul>
+                  <li>Eltrick</li>
+                  <li>Mico</li>
+                  <li>Umbra</li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+
+          <ul>
+            <li>Lastly, if Tammy is present in the module, YOU CAN ONLY HANGOUT WITH TAMMY AT NIGHT.</li>
+            <li>
+              <ul>
+                <li>If Tammy is in the morning, shift all 3 friends left by one</li>
+                <li>If Tammy is in the evening, shift all 3 friends right by one.</li>
+                <li>If Tammy is in the night, swap the other two friend’s times, because she’s a little evil and can tinker with time. >;3</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer relative-footer">4</div>
+      </div>
+      <div class="page page-bg-05">
+        <div class="page-header">
+          <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+          <span class="page-header-section-title">Furry Friend</span>
+        </div>
+        <div class="page-content">
+          <h3>2. Time to Hangout!</h3>
+          <ul>
+            <li>
+              Now you know what time to hangout with each friend. You are going to press the friend in order of morning, evening, then night when you have the option to choose who to hangout with.
+            </li>
+            <li>Once you choose your friend, a dialogue box will appear along with a stamina bar.</li>
+            <li>
+              For each friend, there will always be a choice of where to go, two scenarios, another choice of where to go, and another two scenarios. Get through these to progress through the module.
+            </li>
+            <li>
+              You will utilize their dialogue, description, and special conditions to make sure your friend is happy with what you decide to do. Keep in mind that you are allowed to make wrong choices
+              without too much punishment. But your friend will keep in mind what you choose that will either please or displease them.
+            </li>
+            <li>
+              Certain choices require you to use some of your stamina. You start with 10 stamina and running out will limit your options. Each choice will state the amount of stamina you will use. You
+              will gain 1 stamina every 2 scenarios.
+            </li>
+            <li>Once you make all choices for a scenario, if you made your friend displeased, part of your heart will break and it will cause a strike but you will still move on with the day.</li>
+            <li>
+              Every time you have a choice to choose where to go, you have an extra option of booping your friend's nose. Press their nose to boop UwU. Depending on which friend it is, either a
+              special event will happen due to a special condition, or the friend will be more prone to enjoy what choices you make if there is not one. You can only do this ONCE.
+            </li>
+            <li>
+              <b
+                >A friend’s Special Condition can apply but IF the serial number contains a letter in their full name (NOT their short names). Their full name will always be on the top of their
+                page.</b
+              >
+            </li>
+            <li>Once you have hung out with all 3 fur friends, the module will solve.</li>
+          </ul>
+          <p>The following next pages are all of the descriptions of the fur friends and their special conditions.</p>
+        </div>
+        <div class="page-footer relative-footer">5</div>
+      </div>
+      <div class="page page-bg-06">
+        <div class="page-header">
+          <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+          <span class="page-header-section-title">Furry Friend</span>
+        </div>
+        <div class="page-content">
+          <h3>Aaron Kitty Boiii</h3>
+          <p>Pronouns: He/Him</p>
+          <p>Type: Feline</p>
+          <p class="info">
+            Aaron is an energetic maine coon who wants to love, and help out anyone wherever he goes. His appearance takes the form of a humanoid creature with cat features like ears, paws, and a
+            tail. To him, he’s classified as being an “Emo-Fem-Cat-Boi.” He has black hair, always seems to wear a collar, and seems to favor wearing full black clothing. He also always wears red
+            shoes for some reason. His cat features are usually colored black, white, and pink.
+          </p>
+          <p class="info">
+            Depending on who Aaron is with and the environments he is in, he is either energetic, or really quiet, but always maintains a low key personality. He’s prone to be energetic if he is
+            surrounded by people he is familiar with, quiet settings, or things he really enjoys. He’s prone to be really quiet if basically he is in settings of the opposite of being energetic. Like,
+            unfamiliar people, loud settings, or displeasure of where he currently is. He doesn’t mind a lot of things he doesn’t like, because both traits are who he really is, and further emulates a
+            low key personality. The most special thing about Aaron is that he always wants to love and help wherever he goes. No matter how people treat him, who they are, and the circumstances;
+            Aaron wants to always somehow love and help.
+          </p>
+          <p class="info">
+            Aaron is a very introverted person, so he is always into those activities. He likes to draw, play musical instruments, and play video games. He aspires to be an animator. He really likes
+            physical touch with his favorite being hugs. He loves being creative and solving problems, most prominently math related. His favorite place to go is the amusement park. He dislikes
+            sports, insects, and public bathrooms. Aaron doesn’t like the competitive mind and rather uses his litter box at home.
+          </p>
+          <p class="info">
+            Because Aaron is a cat, his cat instincts always take over. He doesn’t really talk like a normal human, and he tends to slur his words, so <b>hearing him might be a little challenging</b>.
+            If there is a ball, tail, or laser around he will instantly get distracted. Because of his speech and cat instincts, are why people tend to hate him. But he does have an evil side,
+            secretly plotting to take over the world one day! Muahahaha!
+          </p>
+          <p>
+            <b
+              >SPECIAL CONDITION: If the bomb has the modules “nya~” AND “Flyswatting,” boop Aaron’s nose to engage in a work session with him! You will only have to make a few choices for the
+              entirety of Aaron.</b
+            >
+          </p>
+        </div>
+        <div class="page-footer relative-footer">6</div>
+      </div>
+      <div class="page page-bg-07">
+        <div class="page-header">
+          <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+          <span class="page-header-section-title">Furry Friend</span>
+        </div>
+        <div class="page-content">
+          <h3>Eltrick</h3>
+          <p>Pronouns: He/Him/She/Her/They/Them</p>
+          <p>Type: Fractal?</p>
+
+          <p class="info">
+            Eltrick is generally an uninteresting person and doesn’t know if that’s a good or bad thing. Their appearance is a basic human body with their head being a fractal while wearing a blue
+            shirt and black pants. They don’t have eyes, nose, mouth, and ears but still are able to communicate normally.
+          </p>
+          <p class="info">
+            With a desire to learn, Eltrick is an impressively intelligent individual. They’re passionate about problem solving and prefer to be put in places where they have to think. But they
+            unfortunately lack normal communication and social skills. They’re unable to hold a solid conversation with anyone, due to being very shy and uninteresting. Eltrick knows this major fault
+            about themself, but makes up for being smart.
+          </p>
+          <p class="info">
+            Eltrick obviously likes math and logic, using their proficient skills as a perk. They like staying organized and really like doing puzzles, especially the ones that make them think. They
+            for some reason have a weird quirk of enjoying a teeny bit of physical pain, don’t ask. The thing that Eltrick hates the most is annoying people! They hate mostly naturally angry people
+            and unconstructive or pointless arguments. They also dislike long conversations and being in uncomfortable situations.
+          </p>
+          <p><b>They want to avoid those at all costs!</b></p>
+          <p style="font-size: 8px">Now I know your asking it, Eltrick is definitely a furry.</p>
+          <br />
+          <p><b>SPECIAL CONDITION: If the bomb has three or more modules on the bomb that are made by Eltrick, boop his non-existent nose to skip a scenario.</b></p>
+        </div>
+        <div class="page-footer relative-footer">7</div>
+      </div>
+      <div class="page page-bg-01">
+        <div class="page-header">
+          <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+          <span class="page-header-section-title">Furry Friend</span>
+        </div>
+        <div class="page-content">
+          <h3>Kugel</h3>
+          <p>Pronouns: He/Him</p>
+          <p>Type: Protogen</p>
+
+          <p class="info">
+            Kugel is a chill bean that loves socializing and being a logistical nerd. His appearance is a robotic protogen with his fur mostly consisting of blue and cyan. He’s often seen being
+            energetic, funny, competitive, and just sooo cuddddllyy! Just remember that he loves being called FURRY TRASH.
+          </p>
+          <p class="info">
+            Kugel really likes having company and being around his friends, so he’s usually nice but sarcastic. Being a literal computer, he always likes to nerd out whenever he gets the opportunity
+            and often scrutinizes people on their logic and intelligence, partially as a joke. He goes to school majoring in Computer Science. He often wants to do his own thing, whether that’s
+            engaging in challenges with no reward or hanging out in what he calls many different “Niche” communities. Despite these cool traits, he can be quite stupid, lazy, and impulsive at times.
+            Aaron thinks it’s just a minor bug in his coding.
+          </p>
+          <p class="info">
+            Kugel likes all kinds of subjects one learns in school, like Geography, Math, English, Science, and more! Kugel likes cheese and solving puzzling problems, like his favorite rubik’s cube.
+            Being a LITERAL COMPUTER again, he loves programming and cryptography. Kugel dislikes overly loud noises, but also dislikes silence. He dislikes bugs, surprises, and making mistakes so
+            just avoid those. His worst enemy is his long software updates… Hopefully that doesn’t happen.
+          </p>
+          <p class="info">
+            Unfortunately, you won’t be able to see many of these traits, due to a… language barrier. Kugel is only programmed to talk in binary, so you’ll have to translate what he is saying. Luckily
+            he helps you by saying things as short as possible. You’ll be translating the binary to base 36.
+          </p>
+          <p class="info">
+            Kugel is a protogen that takes a lot of power.
+            <b
+              >The less batteries there are on the bomb, the more you’re required to charge Kugel. If Kugel starts to shut down, use 1 stamina to charge him up to continue the scenario. Failing to
+              charge him will result in the end of the scenario with a strike.</b
+            >
+          </p>
+          <p>
+            <b
+              >SPECIAL CONDITION: If the bomb has 6+ batteries and has the module “Kugelblitz,” boop his nose to put Kugel to Sleep Mode. Leave him there to rot and skip all of his scenarios
+              entirely!</b
+            >
+          </p>
+        </div>
+        <div class="page-footer relative-footer">8</div>
+      </div>
+      <div class="page page-bg-02">
+        <div class="page-header">
+          <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+          <span class="page-header-section-title">Furry Friend</span>
+        </div>
+        <div class="page-content">
+          <h3>MásQuéÉlite</h3>
+          <p>Pronouns: He/Him</p>
+          <p>Type: Birdie</p>
+          <p class="info">
+            Más is a bird who is mostly a quiet introverted person. His appearance is a violet-backed starling with his fur consisting of only feathers. He’s almost always being seen wearing a fancy
+            tuxedo.
+          </p>
+          <p class="info">
+            Although Más is mostly introverted, he’s always willing to try to enjoy himself with people. He prefers always being alone, so you really have to try to get him to have a good time. He
+            claims to always want to wear a suit, because he always wants to look presentable, and wants that charisma which he thinks he doesn’t have much of.
+          </p>
+          <p class="info">
+            Más likes plenty of things, like playing video games, making music, and programming. He especially likes playing chess, and he likes challenging people to go against them in games. He also
+            really pays attention to being respectful in every possible moment. Whether that’s himself, other people, or other things,
+            <b>he factors in that sympathetic energy to decide how much respect and time one truly deserves.</b> He also likes working on creative projects, and always looks forward to some
+            inspiration to ignite that creative feeling. He generally dislikes even slightly disrespectful people, and again will judge whenever he gets the chance.
+          </p>
+          <p>
+            <b
+              >SPECIAL CONDITION: If the bomb has the module, “Cheep Checkout,” boop his beak to take him to a bird shop, put him up for sale, and leave him trapped to skip all of his scenarios
+              entirely!</b
+            >
+          </p>
+        </div>
+        <div class="page-footer relative-footer">9</div>
+      </div>
+      <div class="page page-bg-03">
+        <div class="page-header">
+          <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+          <span class="page-header-section-title">Furry Friend</span>
+        </div>
+        <div class="page-content">
+          <h3>Mico</h3>
+          <p>Pronouns: He/Him/They/Them</p>
+          <p>Type: Foxcoon</p>
+          <p class="info">
+            Mico is a high energy fox and racoon hybrid that always tries to let out that energy. His appearance is a tall brown animal with gray shorts and a giant fuzzy tail. He is a student
+            studying freelance programming.
+          </p>
+          <p class="info">
+            Mico loves playing various games as long as it’s with other people, most prominently laser tag! His favorite hobbies include cooking and dancing. He likes all types of fruits, except he
+            passionately hates passion fruit! He also isn’t fond of cheese at all. He mostly dislikes being criticized for the things he loves to periodically do, and also prominently crowded places.
+          </p>
+          <p class="info">
+            Mico lets out his energy in many ways, you just have to let him. He does this by randomly making noises, singing, dancing, or pouncing on his friends. If he has too much energy and gets
+            especially excited about something, be ready to listen for what feels like ages. Pay attention though if he feels like you aren't listening he can quickly get demotivated, but he will also
+            stop with the talking early. If you get through it though and he got your attention you might just make him even happier.
+          </p>
+          <p>
+            On the topic of crowded places, Mico can easily get overwhelmed if there are too many sounds going on at once. If this happens he will get highly uncomfortable and you need to quickly get
+            him out of the situation you're in and possibly calm him down or cheer him up, distract him to make him stop focusing on the sounds in some way and concentrating on other stuff going on,
+            but it will take more of your stamina. Failing to do so might drown his entire energy for the rest of the day!
+          </p>
+          <p><b>SPECIAL CONDITION: If the bomb has 5+ lit indicators, boop Mico’s nose for a special challenge! You will only have to make a few choices for the entirety of Mico.</b></p>
+        </div>
+        <div class="page-footer relative-footer">10</div>
+      </div>
+      <div class="page page-bg-04">
+        <div class="page-header">
+          <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+          <span class="page-header-section-title">Furry Friend</span>
+        </div>
+        <div class="page-content">
+          <h3>RazorBlade</h3>
+          <p>Pronouns: He/Him</p>
+          <p>Type: Canine</p>
+          <p class="info">
+            Razor is a shy and clumsy canine who just wants to live the best life he can! His appearance is a gray wolf with blue and orange markings. He’s often seen just wanting to have a good time
+            and always prefers doing everything that he loves and is passionate about.
+          </p>
+          <p class="info">
+            Being very shy and easily embarrassed, he’s a bit introverted, but when he is with his close friends, his personality can bloom! He always tries to look at the positive side of things and
+            rarely gets sad and angry, always putting a smile on any situation. Although, he is an innocent person, being a bit gullible in a potentially dangerous situation or topic he is engaged in.
+            Importantly, you will get to know he is quite clumsy, tending towards embarrassment or mistakes.
+          </p>
+          <p class="info">
+            Razor loves roller coasters, video games, and fidgeting with his favorite rubik’s cube. He has pretty high energy, so he likes to dance! But
+            <b>he can space out for a long time and be transfixed into anything but the situation at times.</b> He also dislikes drama and disrespectful people, but the good thing about him is that he
+            never wants to talk about it.
+          </p>
+          <p class="info">
+            The most prominent thing about Razor is how easily embarrassed he can get! He doesn’t react well when he is the center of attention. It frustrates him so much when he gets made to look
+            like a fool, <b>don’t get him into that situation, which will happen often due to him being clumsy.</b>
+          </p>
+          <p>
+            <b
+              >SPECIAL CONDITION: If the bomb has exactly 1 battery, an unlit FRK indicator, a serial port, a Rubik’s Cube module, AND a module with the word “gray” or “grey” in the name, boop Razor’s
+              nose to give him a rubik’s cube that will skip two scenarios. It will also require 3 stamina to do.</b
+            >
+          </p>
+        </div>
+        <div class="page-footer relative-footer">11</div>
+      </div>
+      <div class="page page-bg-05">
+        <div class="page-header">
+          <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+          <span class="page-header-section-title">Furry Friend</span>
+        </div>
+        <div class="page-content">
+          <h3>Tammy</h3>
+          <p>Pronouns: She/Her</p>
+          <p>Type: Feline</p>
+          <p class="info">
+            Tammy is a purple cat with a pale purple muzzle, six whiskers, three tufts of fur that curl upward on each of her cheeks, a small black nose, fangs, and a blue tongue. She wears a
+            tuxedo-like black and yellow vest with a yellow bow tie, along with a yellow bowler hat on her head with a black strap.
+          </p>
+          <p class="info">
+            The tall cat has a best friend named Duckie, who is a yellow duck. Tammy always wants to do tasks to the fullest and bestest, while Duckie is mindful of the potential bad consequences that
+            can lead to, so they disagree with that but they stay persistent with each other and always agreeing on at least something. She always wants to be in the presence of someone, because she
+            always feels uneasy by herself, especially at night. She is confident with things she believes in but a bit naive at seeing real danger ahead, that usually is when she is with someone. She
+            becomes timid when she is in a situation of being by herself.
+          </p>
+          <p class="info">
+            Tammy loves her friend Duckie, because they’re roommates! <b>You might see him sometimes!</b> She likes candy a lot and when she is intrigued in an activity, she wants to do it all night
+            long! She always likes finding a bit of incompetence in people, mostly fears, and jokes around about them all the time. But they’re jokes, she doesn’t mean it! But she especially hates it
+            when that incompetence can disrupt her goal of completing an activity. Although she is a bit naive, Tammy can tell when she feels actually uncomfortable, when it’s obvious there’s danger
+            or a bad end.
+          </p>
+          <p class="info">
+            Although Tammy is here, she is a fictional character not meant to be real in this world. She acts as an imaginary friend to Aaron, because Aaron has a mad crush on this fellow feline.
+            <b>She can act very <a href="https://youtu.be/3BY9Fd38RVU">ṡ̸̗̓̊ȕ̴̡͚͇s̷̨̼̈́̽p̷̗̠͙̑̉͋ȋ̷͕̼̜̈́̏c̸̛͕̟͊̈́i̸̦̤͎͐o̵̝̖͆ư̵̙͓͛͂s̶̢͂̈́̊-</a>though, but she is unable to control this. You might want to upset the b̶̘̊͜͝ẽ̵͍̪̋a̷̱̭̞̿̈́͗ș̴͆̾̏t̵͎͌̿ when that side of her is shown.</b>
+          </p>
+          <p class="info">
+            Tammy is not an original character. She was created by <a href="https://www.youtube.com/@thewaltenfiles">Martin Walls</a>, starring as the main character in his video “<a
+              href="https://youtu.be/dbsvgZhCM3c"
+              >The Mysterious House</a
+            >,” and others of his work. Walls is not affiliated with the creators of the module in any way, simply using the character for fun, with this being non-canon to any lore. Credit goes to
+            Walls for the creation of this character.
+          </p>
+        </div>
+        <div class="page-footer relative-footer">12</div>
+      </div>
+      <div class="page page-bg-06">
+        <div class="page-header">
+          <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+          <span class="page-header-section-title">Furry Friend</span>
+        </div>
+        <div class="page-content">
+          <p><b id="heart">SPECIAL CONDITION: If the bomb has a module with “duck” in the name, AND Aaron was present on the module, boop her snoot for a special meetup between them!</b></p>
+          <p>
+            <b
+              >Ṣ̶͐P̸̨̒È̵̡͎C̵̜͕͆̊̉I̸̘͛̕Ḁ̵̺͛͒L̵̙͐̆ ̷͖̖̈́͠ͅĊ̴̬̘̗͑Ó̴̡̳͜Ǹ̶̠͙͑D̸̛̳̯͐̃I̵̘̫̖̾͊͝T̵̜̣̩͆̎I̷͕̓O̶͈̻͊͗̽N̵̮͊:̴̠͛ ̵̛̺͙̪̉Ǐ̷̢͎̙̌͌f̸̨̮̮́ ̶̝̠̋̆͠t̵̹̚h̷͚̿͆e̸̬̪͒̈ ̸̠͘ḅ̷̿ō̷̝̔m̵͎̃͂̀b̸̛̻̿͂ ̸͍͚̈́a̵̩̻͗ċ̶̼͔̎͝ͅt̷̪̠͒i̵͎̇͊͝v̸̨̺̜͗͠a̵͎̮̅t̵̘̞͘e̵̩̤̮̾̑d̷͙̝͍̾ ̵̫̹̀a̷̼̲͆ẗ̷͇̬͈ ̷̜͓̭̐à̶̠́n̷͚͒̄͘y̶̥̗̓̐̽ ̵̼̺̭̀ẗ̵̮͒̄ͅi̴͈̫̙͐m̴̺̝͎͋̇̃ẹ̶̬͕̑͠͝ ̴͙̋͋ͅo̶̞͌̚͝f̴̡̛̣̬͑ ̶̘̩͒͠ť̶͈̠͚́̕h̸̜́e̴̲͊̅̓͜ ̷͚̊̔̒d̴͈̦̄̒ȁ̴͍̈́̒y̶͌͒́͜ ̵̝̭̓͝ͅờ̶͕͙̜f̵̣͂ ̶̹͘Ǫ̴̰̫͝c̶͈͛̈́t̷͓̎̀o̸̹̦̲͗́̚b̸͈͉̲̆̚͝ë̵̞̬́ͅr̵͙͚̅̆́ ̷̢̠͈̇̌3̶̙̋̔͋1̶̛̰̓͊͜ͅ,̶̯̞̈̇ ̵̹̩̄͌a̸͍͆̀̊ń̷̯̥͕ḋ̴̪̜̩͊ ̸͙̺̹̽̒̎Ť̷͙͜a̸̧̙͆̈́m̸̰̜͇̈m̶̙͊͜y̴̤̮̓ ̸̛̥̼̆̅ḯ̷̭̫̜̈́̍s̸̛̛̰̩̦ ̸̢͇̓͂p̴͉͖͛r̵̙̙͐̌̀ͅẹ̷͑̚͝s̸̢̠͊ḙ̴̋̀̔n̵̻̻͕̈́̾̕t̴͖́̋ ̶̬̦̻͋ó̴̧̫̹n̴̦̚͝ ̴͔͖̂̈́t̷͈̘̘̒͝h̷̥̒͂ē̷͔̙̎ ̶̰̏m̵̛̞͙̺̀̀o̸̺͋̓̌d̶̟͑̈́͠û̶̲̪̜l̵̦͉̜̈́͂̈́e̸̻̐̊ͅ,̴̛̠̯̓̐ ̸̨̟̈́́̄I̷̪̗͙̾͛͠G̸̞̳̋Ṅ̴̪̃O̵̺̝̞͐Ŗ̴̽͜͜E̵̪̫͚̍̆̚ ̵͎͗A̸̫̭͐Ḻ̶̢͓̽͊̔L̷̝͛͂̚ ̵̖̽S̵̹̯͈͂T̶̪̥͑̾͜E̶̡͙̟͊̋͊P̸̦͕̑͂̋S̷̨͉̞̋̾̂ ̸̹̀Á̶͉̗͖̏͝N̸̬̰͂͌̑D̸̨̫̏ ̴͔̲̜͝S̴̡̧̱̆̌E̸̡̗͓͗̈̍L̵̲͇̩͊͘͠É̶͕̀C̴̖̺͋̑T̴̤̗̘̅͛ ̴̱̦̔̎T̴̡̮̄A̸͓̻̞̽M̴̢̠̖͆͛̌M̸̥͍̾̈́͗Y̷̧̘̪̾ ̸͇̗̆Ã̷̢̺͕̕T̷͚͓͈͋̄̒ ̸̣̫̎ͅT̵͙͉͜͠͠Ḧ̶̦͙́̕E̶̮̗͌̈́ ̷͖̦͇̋̆͘S̶͈͛̀T̶͚̣̐̾͠Å̸̢̄R̷̬̦̤̽̀͆Ţ̵̦̣́͊,̶̩̥̒͊̌ ̸̲͇͆͛̐͜t̸̡͕̬̃̈́̄h̶̲̜͕̔̇a̸̛̺̬̝t̵̗̱͗̂ ̸̻̔ḭ̶͍͗s̷͔̬̼̃͌͝ ̶̜̱̔͐ͅi̶̱͖͊f̸̗͒ ̴̮̀͑ͅy̸̬̓͒͝ơ̴̧̮ů̴̥̥
+              ̶̡͆̍͝w̶̹̋ǎ̸͔̎ņ̴͎̪͂̒ẗ̶̲́.̴̬̋͑ͅ</b
+            >
+          </p>
+        </div>
+        <div class="page-footer relative-footer">13</div>
+      </div>
+      <div class="page page-bg-07">
+        <div class="page-header">
+          <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+          <span class="page-header-section-title">Furry Friend</span>
+        </div>
+        <div class="page-content">
+          <h3>Umbra Moruka</h3>
+          <p>Pronouns: He/Him</p>
+          <p>Type: Feline</p>
+          <p class="info">
+            Umbra is a mysterious cat who no one really knows about. His appearance is a purple cat wearing a white shirt and blue jeans. His eyes are yellow and he also has a long thin tail. His
+            claws are usually very sharp as well.
+          </p>
+          <p class="info">
+            This mystery of a cat has a shady history, and we do not know much about him. He usually steals from people to gain something out of it, and he is a pro at getting away with it, like a
+            ninja in the shadows. Speaking of shadows, Umbra usually hides in the dark and tries to avoid the light. He is also very careful for who he talks to,
+            <b>meaning you have to gain his trust somehow.</b>
+          </p>
+          <p class="info">
+            There are a very few things that Umbra is known to like. But the definite likes can be money, and food but only for being sustained for. He will take any shortcuts towards obtaining these
+            things, thinking he can avoid the bad consequences of this, which he usually does! He dislikes society a lot, but only because it can get him in trouble. He will only hangout with a very
+            few selectable people that he personally trusts.
+          </p>
+          <p class="info">
+            Although Umbra can be seen as disgruntled, he has a heart for the friends he trusts. He loves hanging out with his friends, and would steal something for them as well. But with his life of
+            crime, he rarely has time to spend quality time with them, so he’s going to be very happy with you once being his friend. Umbra also is pretty intelligent, with him having a nac for
+            getting himself out of trouble, and being intrigued in reading books from the library. If there is no one in the park, he will quickly play there because he loves to climb around there!
+          </p>
+          <p><b>SPECIAL CONDITION: If the bomb has the modules “nya~” AND “The Garnet Thief,” boop his nose to turn him into jail, skipping all of his scenarios entirely!</b></p>
+        </div>
+        <div class="page-footer relative-footer">14</div>
+      </div>
+      <div class="page page-bg-01">
+        <div class="page-header">
+          <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+          <span class="page-header-section-title">Furry Friend</span>
+        </div>
+        <div class="page-content">
+          <h3>???</h3>
+          <p>Pronouns: Unknown</p>
+          <p>Type: Literally a ?</p>
+          <p class="info">
+            ??? is a gray humanoid figure. It will secretly take the form of one of the nine other fur friends. You will have to pay more attention to the dialogue to find out which friend they
+            actually are. After two scenarios, ??? might change into another friend. <b>All of the other friends’ special conditions will never apply to ???.</b>
+          </p>
+          <p><b>SPECIAL CONDITION: If the bomb has the modules “...?,” “Question Mark,” AND a module with “cipher” in the name, ??? might change character after every scenario.</b></p>
+        </div>
+        <div class="page-footer relative-footer">15</div>
+      </div>
+    </div>
+  </body>
+</html>
