@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class Friend {
 
-    private string ShortName {  get;  set; }
-	private string FullName { get; set; }
-	private bool SpecialCondition { get; set; }
+    public string ShortName {  get; private set; }
+	public string FullName { get; private  set; }
     public static string SerialNumber { get; set; }
-	public Friend(string name, string fullName, bool specialCondition)
+    public bool HangOut { get; set; } //if the friend has been seen already
+	public Friend(string name, string fullName)
 	{
 		this.ShortName = name;
 		this.FullName = fullName;
-		this.SpecialCondition = SpecialRuleApplies() && specialCondition;
+        HangOut = false;
 	}
 
-    private bool SpecialRuleApplies()
+    public bool SpecialRuleApplies()
     {
         FullName = FullName.ToUpper();
 

@@ -7,9 +7,14 @@ public class Main : MonoBehaviour {
     public KMBombInfo Bomb;
     public KMAudio Audio;
 
+    RepoJSONGetter json;
+    const string url = "";
+
+
     static int ModuleIdCounter = 1;
     int ModuleId;
     private bool ModuleSolved;
+
 
     void Awake()
     {
@@ -21,12 +26,41 @@ public class Main : MonoBehaviour {
         */
 
         //button.OnInteract += delegate () { buttonPress(); return false; };
+    }
+
+    IEnumerator Start()
+    {
+        //if data is not done loaded
+        if (!RepoJSONGetter.LoadingDone)
+        {
+            //if not already loading, load
+            if (!RepoJSONGetter.Loading)
+            {
+                yield return json.LoadData(url);
+            }
+
+            //if aleady loading, wait until loading is done
+            else
+            {
+                do
+                {
+                    yield return new WaitForSeconds(0.1f);
+
+                } while (!RepoJSONGetter.LoadingDone);
+            }
+        }
+
+        SetUpModule();
+        
 
     }
 
-    void Start()
+    void SetUpModule()
     {
-
+        if (RepoJSONGetter.Success)
+        {
+            RepoJSONGetter.UsableModules.ForEach(x => Debug.Log(x.ToString()));
+        }
     }
 
     void Update()
